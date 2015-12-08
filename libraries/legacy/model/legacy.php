@@ -493,7 +493,7 @@ abstract class JModelLegacy extends JObject
 
 			$rowArray = JArrayHelper::fromObject(json_decode($historyTable->version_data));
 
-			$typeId = JTable::getInstance('Contenttype')->getTypeId($this->typeAlias);
+			$typeId = (int) JTable::getInstance('Contenttype')->getTypeId($this->typeAlias);
 
 			if ($historyTable->ucm_type_id != $typeId)
 			{
